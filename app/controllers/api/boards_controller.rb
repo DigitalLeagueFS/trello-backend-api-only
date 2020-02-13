@@ -2,6 +2,8 @@ module Api
   class BoardsController < ApiController
 
 
+
+
     private
 
     def resource_class

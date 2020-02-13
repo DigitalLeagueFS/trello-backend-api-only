@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     resources :teams
   end
 
+  #get '/index_by_user' => 'api/teams/index_by_user'
+
   resources :sessions, only: [:create]
   resources :registrations, only: [:create]
   delete :logout, to: "sessions#logout"

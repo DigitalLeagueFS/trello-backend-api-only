@@ -1,6 +1,15 @@
 module Api
   class ColumnsController < ApiController
 
+    def index
+      if params[:board_id]
+        @columns = Column.where(:board_id => params[:board_id])
+        render json: @columns.to_json, status: :ok
+      else
+        @columns = Column.all
+        render json: @columns.to_json, status: :ok
+      end
+    end
 
     private
 
